@@ -9,15 +9,15 @@
 }
 
 :root {
-  --color-primary: #6c63ff;
+  --color-primary: #3da9fc;
   --color-success: #00bf8e;
   --color-warning: #f7c94b;
   --color-danger: #f75b42;
-  --color-white: #fff;
+  --color-white: #fffffe;
   --color-black: #000;
-  --color-bg: #1f2641;
-  --color-bg1: #2e3267;
-  --color-bg2: #424890;
+  --color-bg: #d8eefe;
+  --color-bg1: #90caf9;
+  --color-bg2: #8bd3dd;
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
@@ -27,7 +27,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.7;
-  color: var(--color-white);
+  color: var(--color-black);
   background: var(--color-bg);
 }
 
@@ -71,13 +71,24 @@ h4 {
 }
 
 a {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 img {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: all 400ms ease;
+  border-radius: 10px;
 }
 
 /* NAVBAR */
@@ -92,7 +103,7 @@ nav {
 
 /*navbar style when scrolled*/
 .window-scroll {
-  background: var(--color-bg);
+  background: var(--color-primary);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
@@ -109,13 +120,17 @@ nav {
   gap: 4rem;
 }
 
+nav button {
+  display: none;
+}
+
 .nav__menu a {
   font-size: 0.9rem;
   transition: all 400ms ease;
 }
 
 .nav__menu a:hover {
-  color: var(--color-bg2);
+  color: var(--color-white);
 }
 
 /* HEADER */
@@ -123,7 +138,7 @@ header {
   position: relative;
   top: 5rem;
   overflow: hidden;
-  height: 70vh;
+  height: 100vh;
   margin-bottom: 5rem;
 }
 
@@ -142,7 +157,7 @@ header {
 /* CATEGORIES */
 .categories {
   background: var(--color-bg1);
-  height: 29rem;
+  height: 31rem;
 }
 
 .categories h1 {
@@ -170,14 +185,14 @@ header {
 }
 
 .category {
-  background: var(--color-bg2);
+  background: var(--color-white);
   padding: 2rem;
   border-radius: 2rem;
   transition: all 400ms ease;
 }
 
 .category:hover {
-  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 1);
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -185,8 +200,20 @@ header {
   background: var(--color-danger);
 }
 
+.category:nth-child(3) .category_icon {
+  background: var(--color-success);
+}
+
+.category:nth-child(4) .category_icon {
+  background: var(--color-warning);
+}
+
+.category:nth-child(5) .category_icon {
+  background: var(--color-warning);
+}
+
 .category_icon {
-  background: var(--color-primary);
+  background: var(--color-bg1);
   padding: 0.7rem;
   border-radius: 0.9rem;
 }
@@ -212,10 +239,11 @@ header {
 }
 
 .course {
-  background: var(--color-bg1);
+  background: var(--color-white);
   text-align: center;
   border: 1px solid transparent;
   transition: all 400ms ease;
+  border-radius: 10px;
 }
 
 .course:hover {
@@ -228,6 +256,12 @@ header {
   padding: 2rem;
 }
 
+.course_image {
+  width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+}
+
 .course_info p {
   margin: 1.2rem 0 2rem;
   font-size: 0.9rem;
@@ -236,7 +270,7 @@ header {
 /* FAQS */
 .faqs {
   background: var(--color-bg1);
-  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+  /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); */
 }
 
 .faqs_container {
@@ -253,6 +287,7 @@ header {
   height: fit-content;
   background: var(--color-primary);
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .faq h4 {
@@ -276,7 +311,7 @@ header {
 
 /* footer */
 footer {
-  background: var(--color-bg1);
+  background: var(--color-primary);
   padding: 5rem;
   font-size: 0.9rem;
 }
@@ -284,7 +319,7 @@ footer {
 .footer_container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .footer_container > div h4 {
@@ -307,4 +342,172 @@ footer {
   display: flex;
   gap: 1rem;
   font-size: 3rem;
+}
+
+/* ================= Media Queries Tablet ==================*/
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  /* =======NAVBARS========= */
+
+  nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-black);
+    cursor: pointer;
+  }
+
+  nav button#close-menu-btn {
+    display: none;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    height: 5.8rem;
+  }
+
+  .nav__menu li a {
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  /* ============== HEADER =============== */
+  header {
+    height: 90vh;
+    margin-bottom: 4rem;
+  }
+
+  .header__container {
+    gap: 0;
+    padding-bottom: 3rem;
+  }
+
+  /* ============== CATEGORIES =============== */
+  .categories {
+    height: fit-content;
+  }
+
+  .categories_container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .categories_left {
+    margin-right: 0;
+  }
+
+  /* ============== POPULAR COURSES =============== */
+  .courses {
+    margin-top: 0;
+  }
+
+  .courses_container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ============== FAQs=============== */
+  .faqs_container {
+    grid-template-columns: 1fr;
+  }
+
+  .faq {
+    padding: 1.5rem;
+  }
+
+  /* ============== FOOTER =============== */
+  .footer_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ================= Media Queries Phone ==================*/
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  /* NAVBAR */
+  .nav__menu {
+    right: 3%;
+  }
+
+  /* HEADER */
+  header {
+    height: 100vh;
+  }
+
+  .header__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .header__left {
+    margin-bottom: 1.3rem;
+  }
+
+  /* CATEGORIES */
+  .categories_right {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .category {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  /* POPULAR COURSES */
+  .courses_container {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  .footer_container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-1 p {
+    margin: 1rem auto;
+  }
+
+  .social {
+    justify-content: center;
+  }
 }
