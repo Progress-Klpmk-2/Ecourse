@@ -28,7 +28,6 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.7;
   color: var(--color-black);
-  background: var(--color-bg);
 }
 
 .container {
@@ -150,47 +149,97 @@ header {
   height: 100%;
 }
 
+.header__left h5{
+  font-weight: 900;
+}
+
 .header__left p {
   margin: 1rem 0 2.4rem;
 }
 
 /*Popular Courses */
-.courses {
-  margin-top: 11rem;
+.ourvisimisi{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
 }
 
-.courses_container {
-  margin-top: 1.9rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+.visi h1{
+  font-weight: 600;
 }
 
-.course {
-  background: var(--color-white);
+.visi h5{
+  color: var(--color-primary);
+}
+
+.misi h5{
+  color: var(--color-primary);
+}
+
+#visimisi{
+  margin-bottom: 30px;
+}
+
+#body h3{
   text-align: center;
-  border: 1px solid transparent;
-  transition: all 400ms ease;
-  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-.course:hover {
-  cursor: pointer;
+#body{
+  background: var(--color-bg1);
+  padding: 70px 0;
 }
 
-.course_info {
-  padding: 2rem;
+#box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.course_image {
-  width: 80%;
-  margin: auto;
-  padding-top: 2rem;
+#ourteams h3{
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.course_info p {
-  margin: 1.2rem 0 2rem;
-  font-size: 0.9rem;
+.box{
+	color:#66a6c8;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.box:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.box .col-3{
+	width: 20%;
+	padding: 10px;
+	box-sizing: content-box;
+	text-align: center;
+}
+
+.icon img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 70%;
+	font-size: 20px;
+	margin: 0 auto;
+	border: 1px solid;
+  margin-bottom: 15px;
+}
+
+.icon img:hover{
+	color : #CCD1E4;
+}
+
+.box .col-3 h6{
+	margin: 5px 0;
 }
 
 /* footer */
