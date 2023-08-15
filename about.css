@@ -157,12 +157,13 @@ header {
   margin: 1rem 0 2.4rem;
 }
 
-/*Popular Courses */
+/*Visi Misi*/
 .ourvisimisi{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 100px;
+  margin: 0 80px;
+  gap: 30px;
 }
 
 .visi h1{
@@ -175,6 +176,10 @@ header {
 
 .misi h5{
   color: var(--color-primary);
+}
+
+.misi h1{
+  font-weight: 600;
 }
 
 #visimisi{
