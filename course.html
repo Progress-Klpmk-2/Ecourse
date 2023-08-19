@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
+    <title>All Course</title>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,12 @@
     <!-- icon -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
 
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .courses {
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -28,62 +33,45 @@
         <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
       </div>
     </nav>
+    <!-- ========================================================================================================== -->
+    <section class="courses">
+      <h2>All Our Courses</h2>
+      <div class="container courses_container">
+        <article class="course">
+          <div class="course_image">
+            <img src="images/html-course-img.png" alt="" />
+          </div>
+          <div class="course_info">
+            <h4>HTML Dasar</h4>
+            <p>Belajar HTML dasar dari Nol. Pahami tag-tag esensial yang sering dipakai. Lalu buat sendiri websitemu dengan HTML. Selamat Belajar!</p>
+            <a href="htmlCourse.html" class="btn">Belajar sekarang!</a>
+          </div>
+        </article>
 
-    <div class="container2">
-      <h1 class="dynamic">Connect With Us</h1>
-      <p>Kami sangat senang untuk membalas kritikan dan saran dari Anda.<br />Jangan malu jika ingin bertanya kepada kami.</p>
-      <div class="contact-box">
-        <div class="contact-left">
-          <h3>Kirim Masukan Anda</h3>
-          <form>
-            <div class="input-row">
-              <div class="input-group">
-                <label>Nama</label>
-                <input type="text" placeholder="Ketik Nama Anda..." />
-              </div>
-              <div class="input-group">
-                <label>Telepon</label>
-                <input type="text" placeholder="Ketik Nomer Telepon..." />
-              </div>
-            </div>
-            <div class="input-row">
-              <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Ketik Email Anda..." />
-              </div>
-              <div class="input-group">
-                <label>Alamat</label>
-                <input type="text" placeholder="Ketik Alamat Anda..." />
-              </div>
-            </div>
+        <article class="course">
+          <div class="course_image">
+            <img src="images/css-course-img.png" alt="" />
+          </div>
+          <div class="course_info">
+            <h4>CSS Dasar</h4>
+            <p>Pada tutorial ini, kamu akan belajar dasar-dasar CSS dari awal hingga bisa membuat style web sendiri dan menjadikan websitemu lebih menarik.</p>
+            <a href="cssCourse.html" class="btn">Belajar sekarang!</a>
+          </div>
+        </article>
 
-            <label>Pesan Anda</label>
-            <textarea rows="5" placeholder="Ketik Pesan Anda..."></textarea>
-
-            <button type="submit">Kirim</button>
-          </form>
-        </div>
-        <div class="contact-right">
-          <h3>Kontak Kami</h3>
-
-          <table>
-            <tr>
-              <td class="td1"><img src="images/envelope.png" width="60px" height="55px" /></td>
-              <td>prg0002@gmail.com</td>
-            </tr>
-            <tr>
-              <td class="td1"><img src="images/phone (2).png" width="60px" height="55px" /></td>
-              <td>+62 812 345 678</td>
-            </tr>
-            <tr>
-              <td class="td1"><img src="images/location.png" width="60px" height="55px" /></td>
-              <td>ITB STIKOM BALI</td>
-            </tr>
-          </table>
-        </div>
+        <article class="course">
+          <div class="course_image">
+            <img src="images/js-course-img.png" alt="" />
+          </div>
+          <div class="course_info">
+            <h4>JavaScript Dasar</h4>
+            <p>Javascript adalah bahasa universal yang bisa digunakan untuk membuat aplikasi website, server, desktop, mobile, game, IoT, dsb.</p>
+            <a href="jsCourse.html" class="btn">Belajar sekarang!</a>
+          </div>
+        </article>
       </div>
-    </div>
-
+    </section>
+    <!-- ========================================================================================================== -->
     <footer>
       <div class="container footer_container">
         <div class="footer-1">
@@ -131,7 +119,6 @@
         </div>
       </div>
     </footer>
-
     <script src="main.js"></script>
   </body>
 </html>

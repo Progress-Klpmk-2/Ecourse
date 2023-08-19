@@ -103,8 +103,12 @@ nav {
 
 /*navbar style when scrolled*/
 .window-scroll {
-  background: var(--color-bg1);
+  background: var(--color-primary);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.window-scroll a:hover {
+  color: var(--color-white);
 }
 
 .nav__container {
@@ -127,10 +131,6 @@ nav button {
 .nav__menu a {
   font-size: 0.9rem;
   transition: all 400ms ease;
-}
-
-.nav__menu a:hover {
-  color: var(--color-white);
 }
 
 /* HEADER */
@@ -197,23 +197,27 @@ header {
 }
 
 .category:nth-child(2) .category_icon {
-  background: var(--color-danger);
+  background: var(--color-primary);
 }
 
 .category:nth-child(3) .category_icon {
-  background: var(--color-success);
-}
-
-.category:nth-child(4) .category_icon {
   background: var(--color-warning);
 }
 
+.category:nth-child(4) .category_icon {
+  background: var(--color-danger);
+}
+
 .category:nth-child(5) .category_icon {
+  background: var(--color-primary);
+}
+
+.category:nth-child(6) .category_icon {
   background: var(--color-warning);
 }
 
 .category_icon {
-  background: var(--color-bg1);
+  background: var(--color-danger);
   padding: 0.7rem;
   border-radius: 0.9rem;
 }
@@ -247,7 +251,6 @@ header {
 }
 
 .course:hover {
-  background: transparent;
   border-color: var(--color-primary);
   cursor: pointer;
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Courses</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+    <link rel="stylesheet" href="course.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav__container">
+        <a href="index.html"><h3>E-COURSE</h3></a>
+        <ul class="nav__menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="course.html">Course</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+      </div>
+    </nav>
+    <!-- ========================================================================================================== -->
+    <section class="subjects">
+      <h2>HTML</h2>
+      <div class="container subjects_container">
+        <article class="subject">
+          <div class="subject_icon"><i class="uil uil-angle-right-b"></i></div>
+          <div class="question_answer">
+            <h4>Apa itu HTML?</h4>
+            <div class="snippet_container">
+              <div class="upper">
+                <p>HTML itu adalah sebuah bahasa yang menggunakan markup atau penanda untuk membuat halaman web.</p>
+                <p>Penanda atau markup ini, nanti akan kita sebut dengan <b>Tag</b>.</p>
+                <p>
+                  HTML berperan untuk menentukan struktur konten dan tampilan dari sebuah web. <br />
+                  Kalau kita ibaratkan nih..
+                  <br />HTML itu seperti batu bata untuk membangun rumah. Batu bata ini dapat disusun, hingga menjadi fondasi dasar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="subject">
+          <div class="subject_icon"><i class="uil uil-angle-right-b"></i></div>
+          <div class="question_answer">
+            <h4>Peralatan Untuk Belajar HTML</h4>
+            <div class="snippet_container">
+              <div class="upper">
+                
+                <p><b>Nah, sekarang.. Tiba saatnya kita praktik!</b>
+                  <br>Tapi sebelum itu, kamu harus siapkan beberapa alat yang akan digunakan untuk praktik.                
+                  <br>Adapun peralatan yang harus kamu persiapkan adalah:
+                  <br><b>1. Teks Editor untuk Menulis HTML</b>
+                  <br>Teks editor akan kita gunakan untuk menulis kode-kode HTML. Kamu bebas menggunakan teks editor apapun.
+                  <br>Apapun teks editornya, yang penting bisa digunakan untuk membuat dan menulis dokumen HTML.
+                  <br><b>2. Web Browser untuk Membuka HTML</b>
+                  <br>Web browser akan kita gunakan untuk membuka HTML. Kamu juga bebeas menggunakan web browser apapun.
+                  <br>Saran saya sih.. gunakan web browser yang terbaru, karena kita juga akan menggunakan HTML versi yang terbaru.
+
+                  <br>Firefox atau Google Chrome, saya kira sudah cukup.
+                </p>
+                  
+            </div>
+          </div>
+        </article>
+
+        <article class="subject">
+          <div class="subject_icon"><i class="uil uil-angle-right-b"></i></div>
+          <div class="question_answer">
+            <h4>Membuat Dokumen HTML Pertamamu</h4>
+            <div class="snippet_container">
+              <div class="upper">
+                <p>
+                  Kini tiba saatnya, kamu harus mencoba sendiri membuat dokumen HTML. Caranya sangat mudah.
+                  <br>Mari kita mulai dengan membuka teks editor, lalu tulislah kode berikut.
+                </p>
+                <pre id="codeSnippet">
+< !DOCTYPE html>
+< html lang="en">
+  < head>
+  < title>Belajar HTML #01 < / title>
+  < / head>
+  < body>
+    < p>Hello World!< / p>
+  < / body>
+< / html> 
+                </pre>
+              </div>
+              <div class="lower">
+                <button class="btn btn-copy" onclick="copyCode()">Salin Kode</button>
+                <p>Setelah itu, simpan dengan nama <b>hello-world.html</b>.
+                <br> maka hasilnya seperti gambar dibawah ini :
+                <img src="images/hello-world-html.png" alt="">
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ========================================================================================================== -->
+    <footer>
+      <div class="container footer_container">
+        <div class="footer-1">
+          <a href="index.html" class="footer-logo"><h4>E-COURSE</h4></a>
+          <p>Platform Pendidikan Teknologi yang menyediakan konten pembelajaran digital skill dalam bentuk online.</p>
+        </div>
+
+        <div class="footer-2">
+          <h4>Our Pages</h4>
+          <ul class="ourpages">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-3">
+          <h4>Privacy</h4>
+          <ul class="privacy">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-4">
+          <h4>Contact Us</h4>
+          <div>
+            <b>Telp : +62 000 000 000 00</b>
+            <b>Email : ecourse@gmail.com</b>
+
+            <ul class="social">
+              <li>
+                <a href="#"><i class="uil uil-instagram-alt"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="uil uil-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="uil uil-whatsapp-alt"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

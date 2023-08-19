@@ -133,140 +133,70 @@ nav button {
   transition: all 400ms ease;
 }
 
-/* HEADER */
-header {
-  position: relative;
-  top: 5rem;
-  overflow: hidden;
-  height: 100vh;
-  margin-bottom: 5rem;
-}
-
-.header__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 2rem;
-  height: 100%;
-}
-
-.header__left p {
-  margin: 1rem 0 2.4rem;
-}
-
-/*Popular Courses */
-.courses {
-  margin-top: 1rem;
-}
-
-.courses_container {
-  margin-top: 1.9rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.course {
+.subjects {
   background: var(--color-white);
-  text-align: center;
-  border: 1px solid transparent;
-  transition: all 400ms ease;
+  /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); */
+}
+
+.subjects_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.subject {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  height: fit-content;
+  background: var(--color-primary);
+  cursor: pointer;
   border-radius: 10px;
 }
 
-.course:hover {
+.subject h4 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.subject pre {
+  margin-top: 0.8rem;
+  width: 70%;
+}
+
+.subject_icon {
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+
+.subject .snippet_container {
+  margin-top: 0.8rem;
+  display: none;
+}
+
+.subject.open .snippet_container {
+  display: block;
+}
+
+.btn-copy {
+  background: var(--color-bg2);
+  color: var(--color-black);
+  margin: 0.6rem 0 0.6rem;
+}
+
+.btn-copy:hover {
   cursor: pointer;
 }
 
-.course_info {
-  padding: 2rem;
-}
-
-.course_image {
-  width: 80%;
-  margin: auto;
-  padding-top: 2rem;
-}
-
-.course_info p {
-  margin: 1.2rem 0 2rem;
-  font-size: 0.9rem;
-}
-
-/* VISI MISI */
-
-.ourvisimisi {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 2rem;
-}
-
-.visi .misi h1 {
-  font-weight: 600;
-}
-
-.visi h5 {
-  color: var(--color-primary);
-}
-
-.misi h5 {
-  color: var(--color-primary);
-}
-
-#visimisi {
-  margin-bottom: 30px;
-}
-
-/* our team */
-#box {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#ourteams h3 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.box {
-  color: var(--color-primary);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.box:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.box .col-3 {
-  width: 20%;
+pre {
+  background-color: var(--color-white);
+  border-radius: 10px;
   padding: 10px;
-  box-sizing: content-box;
-  text-align: center;
-}
-
-.icon img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 70%;
-  font-size: 20px;
-  margin: 0 auto;
-  border: 1px solid;
-  margin-bottom: 15px;
-}
-
-.icon img:hover {
-  color: #ccd1e4;
-}
-
-.box .col-3 h6 {
-  margin: 5px 0;
+  border: 1px solid var(--color-black);
+  font-family: "Courier New", monospace;
+  cursor: auto;
+  width: 80%;
 }
 
 /* footer */
@@ -364,40 +294,6 @@ footer {
     display: grid;
     place-items: center;
   }
-
-  /* ============== HEADER =============== */
-  header {
-    height: 90vh;
-    margin-bottom: 4rem;
-  }
-
-  .header__container {
-    gap: 0;
-    padding-bottom: 3rem;
-  }
-
-  /* ============== MAIN =============== */
-  .courses {
-    margin-top: 0;
-  }
-
-  .courses_container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .ourvisimisi {
-    grid-template-columns: 1fr;
-  }
-
-  .misi {
-    margin-top: 2.5rem;
-  }
-
-  /* ============= OUR TEAM ============== */
-  #ourteams {
-    grid-template-columns: 1fr 1fr;
-  }
-
   /* ============== FOOTER =============== */
   .footer_container {
     grid-template-columns: 1fr 1fr;
@@ -414,26 +310,6 @@ footer {
   /* NAVBAR */
   .nav__menu {
     right: 3%;
-  }
-
-  /* HEADER */
-  header {
-    height: 100vh;
-  }
-
-  .header__container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    margin-top: 0;
-  }
-
-  .header__left {
-    margin-bottom: 1.3rem;
-  }
-
-  /* MAIN */
-  .courses_container {
-    grid-template-columns: 1fr;
   }
 
   /* FOOTER */
