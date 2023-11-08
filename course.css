@@ -160,11 +160,6 @@ nav button {
   line-height: 1.5;
 }
 
-.subject pre {
-  margin-top: 0.8rem;
-  width: 70%;
-}
-
 .subject_icon {
   align-self: flex-start;
   font-size: 1.2rem;
@@ -179,24 +174,20 @@ nav button {
   display: block;
 }
 
+pre code.hljs {
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
 .btn-copy {
   background: var(--color-bg2);
   color: var(--color-black);
   margin: 0.6rem 0 0.6rem;
+  font-size: 0.9rem;
 }
 
 .btn-copy:hover {
   cursor: pointer;
-}
-
-pre {
-  background-color: var(--color-white);
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid var(--color-black);
-  font-family: "Courier New", monospace;
-  cursor: auto;
-  width: 80%;
 }
 
 /* footer */

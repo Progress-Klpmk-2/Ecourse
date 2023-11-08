@@ -43,31 +43,18 @@ const closeNav = () => {
 closeBtn.addEventListener("click", closeNav);
 
 //copy code snippad
-function copyCode() {
-  // Dapatkan elemen pre yang berisi kode
-  var codeElement = document.getElementById("codeSnippet");
+const codeBlock = document.getElementById("code");
+const copyButton = document.getElementById("copy-button");
 
-  // Buat elemen textarea sementara untuk menyalin teks
-  var tempTextArea = document.createElement("textarea");
-  tempTextArea.value = codeElement.textContent;
+const copyTextHandler = () => {
+  const text = codeBlock.innerText;
 
-  // Sembunyikan elemen textarea agar tidak terlihat di halaman
-  tempTextArea.style.position = "absolute";
-  tempTextArea.style.left = "-9999px";
-  document.body.appendChild(tempTextArea);
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Kode sudah dicopy");
+  });
+};
 
-  // Pilih teks dalam elemen textarea
-  tempTextArea.select();
-
-  // Salin teks yang dipilih
-  document.execCommand("copy");
-
-  // Hapus elemen textarea sementara
-  document.body.removeChild(tempTextArea);
-
-  // Tampilkan pesan sukses (opsional)
-  alert("Kode berhasil disalin!");
-}
+copyButton.addEventListener("click", copyTextHandler);
 
 //course pages
 const subjects = document.querySelectorAll(".subject");

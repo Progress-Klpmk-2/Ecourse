@@ -12,12 +12,9 @@
     <!-- icon -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+
     <link rel="stylesheet" href="course.css" />
-    <style>
-      img{
-        width: 80%;
-      }
-    </style>
   </head>
   <body>
     <nav>
@@ -41,27 +38,24 @@
           <div class="subject_icon"><i class="uil uil-angle-right-b"></i></div>
           <div class="question_answer">
             <h4>Apa itu CSS?</h4>
-            <div class="snippet_container">
-              <div class="upper">
-                <p>
-                  <b>CSS (Cascading Style Sheets)</b> adalah suatu aturan untuk mengatur tampilan web sehingga terlihat lebih menarik dan indah.
-                  <br>Dengan CSS, kita dapat mengatur layout (tata letak), warna, font, garis, background, animasi, dan lain-lain.
-                  <br>Contoh kita ambil dari website PetaniKode:
-                  <img src="images/css-pengenalan.png" alt="website tanpa CSS dan dengan CSS">
-                  <br>Tanpa CSS, website Petani Kode terlihat jelek dan tidak tertata. Sedangkan jika menggunakan CSS, tampilannya jadi lebih bagus dan rapi.
-                </p>
-              </div>
+            <div class="snippet_container">          
+              <p>
+                <b>CSS (Cascading Style Sheets)</b> adalah suatu aturan untuk mengatur tampilan web sehingga terlihat lebih menarik dan indah.
+                <br>Dengan CSS, kita dapat mengatur layout (tata letak), warna, font, garis, background, animasi, dan lain-lain.
+                <br>Contoh kita ambil dari website PetaniKode:
+                <img src="images/css-pengenalan.png" alt="website tanpa CSS dan dengan CSS">
+                <br>Tanpa CSS, website Petani Kode terlihat jelek dan tidak tertata. Sedangkan jika menggunakan CSS, tampilannya jadi lebih bagus dan rapi.
+              </p>
             </div>
           </div>
         </article>
+
 
         <article class="subject">
           <div class="subject_icon"><i class="uil uil-angle-right-b"></i></div>
           <div class="question_answer">
             <h4>Cara menulis CSS pada HTML</h4>
             <div class="snippet_container">
-              <div class="upper">
-                
                 <p>
                   Ada tiga cara menulis CSS di HTML:
                   <br><b>1. Internal CSS,</b> yang ditulis di dalam tag style.
@@ -69,9 +63,7 @@
                   <br><b>3. External CSS,</b> yang ditulis di file CSS terpisah dengan HTML.
                   <br>Gimana contoh dan caranya?
                   <br>Untuk lebih lanjut dan jelasnya, bisa di kunjungi laman web berikut : <a href="https://www.petanikode.com/css-dalam-html/">https://www.petanikode.com/css-dalam-html/</a> 
-                  
-                </p>
-                  
+                </p> 
             </div>
           </div>
         </article>
@@ -92,31 +84,32 @@
                   <br><b>1. Selektor</b>
                     <br>Selektor adalah kata kunci untuk memilih elemen HTML yang akan kita beri style.
                     <br>Contohnya:
-                    <pre id="codeSnippet">
+                    <pre><code id="code">
 h1 {
   color: red;
 }
-                    </pre>
+                    </code></pre>
+                    <button class="btn btn-copy" id="copy-button">Salin Kode</button>
                 </p>
 
                 <p>
                   <br><b>2. Blok Deklarasi</b>
                   <br>Blok deklarasi adalah tempat kita menuliskan atribut atau properti CSS yang akan diberikan ke pada elemen yang telah diseleksi.
                   <br>Contoh:
-                  <pre id="codeSnippet">
+                  <pre><code id="code">
 p {
-    font-size : 18px;
+  font-size : 18px;
 }
-                  </pre>
+                  </code></pre>
                   Artinya, kita akan mengatur ukuran font dari tag <b>p</b> sebesar <b>18px</b>.
                 </p>
 
                 <p>
                   Properti adalah sekumpulan aturan yang akan diberikan kepada elemen yang dipilih.
                   Format penulisan properti seperti ini:
-                  <pre id="codeSnippet">
+                  <pre><code id="code">
 font-family : "Times new roman", Georgia, Roboto;
-                  </pre>
+                  </code></pre>
                   Ini bisanya kita pakai untuk memberikan nilai opsional. <br>Misalnya font Times new roman tidak ada maka yang akan dipakai adalah Georgia, begitu juga seterusnya.
                 </p>
               </div>
@@ -135,7 +128,7 @@ font-family : "Times new roman", Georgia, Roboto;
                   Komentar biasanya dipakai untuk memberikan informasi tambahan di kode CSS.
                   <br>Cara menulis komentar di CSS dilakukan dengan tanda /* dan diakhiri dengan */.
                   <br>Contoh:
-                  <pre id="codeSnippet">
+                  <pre><code id="code">
 /* ini adalah komentar */
 
 /*
@@ -143,15 +136,15 @@ font-family : "Times new roman", Georgia, Roboto;
   yang ditulis lebih dari
   satu baris
 */
-                    </pre>
+                  </code></pre>
                     Selain untuk memberikan informasi tambahan, kita juga bisa menggunakan komentar untuk menaonaktifkan beberapa kode tertentu.
                     <br>Contoh:
-                    <pre id="codeSnippet">
+                    <pre><code id="code">
 p {
   /* color: red; */
   font-family: "Times new roman";
 }
-                    </pre>
+                    </code></pre>
                     <br>Properti <b>color: red</b> tidak akan dipakai, karena dia berada di dalam komentar.
                 </p>
                   
@@ -209,5 +202,7 @@ p {
       </div>
     </footer>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>

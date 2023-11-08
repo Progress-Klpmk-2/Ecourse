@@ -11,7 +11,7 @@
 
     <!-- icon -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="course.css" />
   </head>
   <body>
@@ -78,28 +78,25 @@
                     mari kita buat program pertama dengan Javascript. <br>
                     Silahkan buka teks editor, kemudian buat file baru bernama <b>belajarJS.html</b> dan isi dengan kode berikut: <br>
                 </p>
-                <pre id="codeSnippet">
-< !DOCTYPE html>
-< html lang="en">
-    < head>
-      < title > Hello World javascript < / title>
-    < / head>
-    < body>
-        < scritp >
+                <pre><code id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World javascript&lt;/title&gt;
+  &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script&gt;
             document.write('Hello World');
-        < / script>
-    < / body>
-< / html> 
-
-                </pre>
+        &lt;/script&gt;
+      &lt;/body&gt;
+&lt;/html&gt; 
+                  </code></pre>
+                <button class="btn btn-copy" id="copy-button">Salin Kode</button>
               </div>
-              <div class="lower">
-                <button class="btn btn-copy" onclick="copyCode()">Salin Kode</button>
                 <p>
                     kemudian buka file tersebut dengan web browser. <br>Maka hasilnya:
                     <img src="images/hello-world-js.png" alt="">
                 </p>
-              </div>
             </div>
           </div>
         </article>
@@ -154,5 +151,7 @@
       </div>
     </footer>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
